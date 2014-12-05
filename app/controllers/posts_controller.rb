@@ -18,11 +18,7 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(post_params)
 
-		if @post.save
-			redirect_to @post, notice: 'Post was succesfuly created'
-		else
-			render :new
-		end
+	 @post.save
 	end
 
 	def update
